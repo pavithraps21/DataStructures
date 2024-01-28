@@ -1,41 +1,56 @@
 package LinkedList;
 
-public class HashTable
+public class HashTable {
 
-{
+	//Calculating the ASCII Values
 
-    //calculating the ascii value
+		public static int HashInput(String input) {
 
-    public static int HashInput(String input){
+			int hash=0;
 
-        int hash=0;
+			for(int i=0;i<input.length();i++) {
 
-        for(int i=0;i<input.length();i++){
+				if(i==2) {
 
-            hash=input.charAt(i);
+					break;
 
-           
+				}
 
-        }
+				System.out.println(input.charAt(i)+" "+(int)input.charAt(i));
 
-        return hash;
+				hash+=input.charAt(i);
 
-    }
+				
 
-    public static void main(String[] args)
+			}
 
-    {
+			return hash;
 
-        String input="AI & CSD";
+		}
 
-        //calculate hash value
+		
 
-        int hashVal=HashInput(input);
+		public static void main(String[] args) {
 
-        System.out.println("user input: "+input);
+			
 
-        System.out.println("hash value: "+hashVal);
+	String input="AI&CSD";
 
-    }
+	//Calculate the hash value
 
-}
+	int hashVal=HashInput(input);
+
+
+
+	System.out.println("User Input: "+input);
+
+	System.out.println("User Input: "+input);
+
+	System.out.println("Hash value: "+hashVal);
+
+		}
+
+
+
+	}
+
